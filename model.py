@@ -157,51 +157,6 @@ with tf.Session() as sess:
                 print('Step {0} -- loss: {1:.3f} -- Accuracy: {2:.2f}'
                       .format(step, loss, acc))
             step += 1 
-        SSS = sess.run(merged, feed_dict={X: batch_xs,
-                                     y: batch_ys,
-                                     keep_prob: 1.})
-        writer.add_summary(summary, count)
     end = time.time()
     print('Finished! Total {0:.3f} s.'.format(end - begin))
     saver.save(sess, '/Users/zt/Desktop/model.ckpt')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
